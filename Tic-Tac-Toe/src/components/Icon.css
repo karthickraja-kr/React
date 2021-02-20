@@ -1,0 +1,28 @@
+.Cross {
+  font-size: 40px;
+  color: #e21717;
+}
+
+.Circle {
+  font-size: 35px;
+  font-weight: bold;
+  color: #3dbe29;
+}
+
+.card {
+  background-color: #cad5e2;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background-color: #e1a2b8;
+  opacity: 0.7;
+}

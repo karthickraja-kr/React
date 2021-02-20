@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Mulish", sans-serif;
+}
+
+.Button {
+  margin: 30px 10px;
+  border: 3px solid #5a20cb;
+  padding: 10px 30px 8px 30px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: #5a20cb;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #fff;
+  font-family: inherit;
+}
+.Button:hover {
+  background-color: #5a20cb;
+  color: #fff;
+}
+
+.Button:focus {
+  outline: none;
+}
+
+.Container {
+  width: 330px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  text-align: center;
+  background-color: #cad5e2;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
+}
+
+.info p {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.cross {
+  font-size: 35px;
+  color: red;
+}
+
+.circle {
+  font-size: 30px;
+  color: green;
+}
