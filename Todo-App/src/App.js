@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import logo from "./logo.svg";
 
@@ -12,16 +12,32 @@ const App = () => {
       temp = temp.concat(list);
       temp.push(newItem);
       setList(temp);
+      localStorage.setItem("todo", JSON.stringify(temp));
       setNewItem("");
     } else {
       alert("Please add Todo item");
     }
   };
 
+  const getItems = () => {
+    if (typeof window !== undefined) {
+      if (localStorage.getItem("todo")) {
+        return JSON.parse(localStorage.getItem("todo"));
+      } else {
+        return [];
+      }
+    }
+  };
+
+  useEffect(() => {
+    setList(getItems());
+  }, []);
+
   const deleteItem = (id) => {
     let temp = list;
     let UpdatedList = temp.filter((item, index) => index !== id.id);
     setList(UpdatedList);
+    localStorage.setItem("todo", JSON.stringify(UpdatedList));
   };
 
   return (
